@@ -3,6 +3,6 @@
   "ignore": [
     "src/components/ui/*",
     "src/hooks/use-toast.ts",
-    "src/hooks/use-mobile.ts"
+    "src/hooks/use-mobile.tsx"
   ]
 }

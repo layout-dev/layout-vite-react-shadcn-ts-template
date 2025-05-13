@@ -1,11 +1,11 @@
 # Your Layout project
 
-This is codebase for your [Layout web app](https://layout.dev/projects/$PROJECT_ID).
+This is codebase for your [Layout app](https://layout.dev/dashboard/projects/$PROJECT_ID).
 
 
 # Installation
 
-Follow these steps:
+You can always visit your [Layout app](https://layout.dev/dashboard/projects/$PROJECT_ID) and ask the Layout AI agent to handle the updates for you. However, if you'd prefer to update the app manually, follow these steps:
 
 ```sh
 # 1. Clone the repo.
@@ -16,9 +16,11 @@ cd <YOUR_PROJECT_NAME>
 
 # 3. Install the dependencies.
 npm install
+# You can use `bun install` but need to run `npm install -g bun` to install it first.
 
 # 4. Start the development server with auto-reloading and an instant preview.
 npm run dev
+# You can use `bun run dev`
 
 # 5. On your browser navigate to http://localhost:5173/
 ```
@@ -39,11 +41,11 @@ npm run dev
 
 ## What technologies are used for this project?
 
-This project is built with Vite, React, Tailwind, Shadcn.
+This project is built with Vite, React, Shadcn, Tailwind CSS, React Router. For a complete list see `package.json`.
 
 ## How can I deploy this project?
 
-Simply open [Layout web app](https://layout.dev/projects/$PROJECT_ID) and click on Share -> Publish.
+Simply open [Layout app](https://layout.dev/projects/$PROJECT_ID) and publish the app from there.
 
 ## I want to use a custom domain, is that possible?
 

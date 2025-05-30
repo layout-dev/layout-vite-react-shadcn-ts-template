@@ -2,10 +2,6 @@ import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Button } from "@/components/ui/button";
-import viteLogo from "@/assets/vite.svg";
-import tailwindLogo from "@/assets/tailwindcss-mark.svg";
-import shadcnLogo from "@/assets/shadcn.svg";
-import reactLogo from "@/assets/react.svg";
 import { Card, CardContent } from "@/components/ui/card";
 
 function Index() {
@@ -43,7 +39,7 @@ function Index() {
                     rel="noopener noreferrer"
                     className="p-2 filter transition-all hover:[filter:drop-shadow(0_0_2em_#646cffaa)]"
                   >
-                    <img src={viteLogo} alt="Vite Logo" className="h-16" />
+                    <img src="https://layout.dev/assets/templates/vite.svg" alt="Vite Logo" className="h-16" />
                   </a>
                   <a
                     href="https://react.dev"
@@ -51,7 +47,7 @@ function Index() {
                     rel="noopener noreferrer"
                     className="p-2 filter transition-all hover:[filter:drop-shadow(0_0_2em_#646cffaa)]"
                   >
-                    <img src={reactLogo} alt="React Logo" className="h-16" />
+                    <img src="https://layout.dev/assets/templates/react.svg" alt="React Logo" className="h-16" />
                   </a>
                   <a
                     href="https://ui.shadcn.com"
@@ -60,7 +56,7 @@ function Index() {
                     className="p-2 filter transition-all hover:[filter:drop-shadow(0_0_2em_#646cffaa)]"
                   >
                     <img
-                      src={shadcnLogo}
+                      src="https://layout.dev/assets/templates/shadcn.svg"
                       alt="Shadcn UI Logo"
                       className="h-16"
                     />
@@ -72,7 +68,7 @@ function Index() {
                     className="ml-6 p-2 filter transition-all hover:[filter:drop-shadow(0_0_2em_#646cffaa)]"
                   >
                     <img
-                      src={tailwindLogo}
+                      src="https://layout.dev/assets/templates/tailwindcss-mark.svg"
                       alt="Tailwind CSS Logo"
                       className="h-16"
                     />

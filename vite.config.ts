@@ -13,4 +13,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // DO NOT REMOVE THIS LINE: Used to help debug preview builds
+    sourcemap: !!process.env.ENABLE_VITE_SOURCEMAP,
+  },
 });

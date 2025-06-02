@@ -1,8 +1,6 @@
-import { Section } from "@/components/ui/section";
-import { Container } from "@/components/ui/container";
-import { Heading } from "@/components/ui/heading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 function Index() {
   return (
@@ -39,7 +37,11 @@ function Index() {
                     rel="noopener noreferrer"
                     className="p-2 filter transition-all hover:[filter:drop-shadow(0_0_2em_#646cffaa)]"
                   >
-                    <img src="https://layout.dev/assets/templates/vite.svg" alt="Vite Logo" className="h-16" />
+                    <img
+                      src="https://layout.dev/assets/templates/vite.svg"
+                      alt="Vite Logo"
+                      className="h-16"
+                    />
                   </a>
                   <a
                     href="https://react.dev"
@@ -47,7 +49,11 @@ function Index() {
                     rel="noopener noreferrer"
                     className="p-2 filter transition-all hover:[filter:drop-shadow(0_0_2em_#646cffaa)]"
                   >
-                    <img src="https://layout.dev/assets/templates/react.svg" alt="React Logo" className="h-16" />
+                    <img
+                      src="https://layout.dev/assets/templates/react.svg"
+                      alt="React Logo"
+                      className="h-16"
+                    />
                   </a>
                   <a
                     href="https://ui.shadcn.com"
@@ -109,3 +115,60 @@ function Index() {
 }
 
 export default Index;
+
+function Container({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn("w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", className)}
+    >
+      {children}
+    </div>
+  );
+}
+
+function Section({
+  children,
+  className,
+  id,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  id?: string;
+}) {
+  return (
+    <section id={id} className={cn("py-16 md:py-24", className)}>
+      {children}
+    </section>
+  );
+}
+
+function Heading({
+  as: Component = "h2",
+  size = "lg",
+  children,
+  className,
+}: {
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  size?: "xl" | "lg" | "md" | "sm";
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const sizeClasses = {
+    xl: "text-4xl sm:text-5xl lg:text-6xl font-extrabold",
+    lg: "text-3xl sm:text-4xl font-bold",
+    md: "text-2xl sm:text-3xl font-bold",
+    sm: "text-xl sm:text-2xl font-semibold",
+  };
+
+  return (
+    <Component className={cn(sizeClasses[size], className)}>
+      {children}
+    </Component>
+  );
+}
